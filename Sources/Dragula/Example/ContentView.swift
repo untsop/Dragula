@@ -164,6 +164,14 @@ extension ContentView {
             .font(.body)
             .padding(.vertical, 8)
             .padding(.horizontal)
+            .contextMenu {
+                Button("Edit") {
+                    print("Edit tapped for: \(item.title)")
+                }
+                Button("Duplicate") {
+                    print("Duplicate tapped for: \(item.title)")
+                }
+            }
         }
     }
     

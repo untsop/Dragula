@@ -177,7 +177,7 @@ extension DraggableView {
                 self?.dropIndicatorView.alpha = 1
             }
             animator.addCompletion { [weak self] test in
-                self?.previewView.isHidden = true
+                self?.previewView.isHidden = false
             }
         }
         
