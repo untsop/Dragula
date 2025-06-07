@@ -157,8 +157,10 @@ public struct DragulaSectionedView<Header: View,
                                 item.getItemProvider()
                             }, onDragWillBegin: {
                                 self.draggedItems.append(item)
+                                NotificationCenter.default.post(name: NSNotification.Name("DragDidBegin"), object: nil)
                             }, onDragWillEnd: {
                                 self.draggedItems = []
+                                NotificationCenter.default.post(name: NSNotification.Name("DragDidEnd"), object: nil)
                                 self.dropCompleted()
                             })
                     }
